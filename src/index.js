@@ -1,8 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import List from './List';
+import Counter from './Counter';
 
 
-render(<List />, document.getElementById('root'));
-
-
+render(<Counter />, document.getElementById('root'));
