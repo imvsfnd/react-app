@@ -5,7 +5,16 @@ export default class Message extends Component {
     title: 'State Change',
     text: 'Say Hi',
   }
-  sayHi = () => {
+  // sayHi = () => {
+  //   this.setState({
+  //     text: 'Hi Yo',
+  //   });
+  // }
+  constructor(props) {
+    super(props);
+    this.sayHi = this.sayHi.bind(this);
+  }
+  sayHi() {
     this.setState({
       text: 'Hi Yo',
     });
