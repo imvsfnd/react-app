@@ -22,6 +22,9 @@ export default class Counter extends Component {
         <h1>{count}</h1>
         <button onClick={this.addCount}>+{step}</button>
       </div>
-    )
+    );
   }
+}
+Counter.defaultProps = {
+  initCount: 15,
 }
