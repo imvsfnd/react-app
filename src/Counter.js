@@ -5,11 +5,15 @@ export default class Counter extends Component {
     count: 0,
   }
   addCount = () => {
-    this.setState((state) => {
-      return {
-        count: state.count + 1,
-      }
-    })
+    this.setState((state) => ({
+      count: state.count + 1,
+    }))
+    this.setState((state) => ({
+      count: state.count + 1,
+    }))
+    this.setState((state) => ({
+      count: state.count + 1,
+    }))
   };
   render() {
     return (
