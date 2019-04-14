@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
+import PropTypes from "prop-types";
 
 export default class Counter extends Component {
+  static propTypes ={
+    initCount: PropTypes.number,
+  }
   constructor(props){
     super(props);
     this.state={
@@ -25,6 +29,6 @@ export default class Counter extends Component {
     );
   }
 }
-Counter.defaultProps = {
-  initCount: 15,
+Counter.propTypes = {
+  initCount: PropTypes.number,
 }
