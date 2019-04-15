@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 
 class Input extends Component {
-    componentDidMount() {
-        this.myInput.focus();
-    }
     setRef = (input) =>{
-        this.myInput = input;
+       input.focus();
     }
     render() {
         return (
