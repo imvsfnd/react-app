@@ -5,16 +5,14 @@ export default class Counter extends Component {
     count: 0,
   }
   addCount = () => {
-    this.setState(state => ({
-      count: state.count + 1,
-    }))
-    this.setState(state => ({
-      count: state.count + 1,
-    }))
-    this.setState(state => ({
-      count: state.count + 1,
-    }))
+    this.setState({
+      count: this.state.count + 1,
+    });
+    this.sendCOunt();
   };
+  sendCount = () => {
+    fetch(`/api/count?vallue=${this.state.count}`);
+  }
   render() {
     return (
       <div>
