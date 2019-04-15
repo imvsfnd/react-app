@@ -7,11 +7,11 @@ export default class Counter extends Component {
   addCount = () => {
     this.setState(
       {
-      count: this.state.count + 1,
+        count: this.state.count + 1,
       },
       () => {
         this.sendCOunt();
-      };
+      }
     );
   };
   sendCount = () => {
