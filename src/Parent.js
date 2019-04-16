@@ -5,6 +5,7 @@ class Parent extends Component {
     childRef = createRef();
     state = {
         count: 0,
+        childCount: 0,
     };
     addCount = () => {
         this.setState({
@@ -12,7 +13,10 @@ class Parent extends Component {
         });
     };
     addChildCount = () => {
-        this.childRef.current.addCount();
+        this.setState({
+            childCount: this.state.childCount + 1,
+        });
+
     };
     render() {
         return (
@@ -20,7 +24,7 @@ class Parent extends Component {
                 <h2>Parent:{this.state.count}</h2>
                 <button onClick={this.addCount}>+Parent</button>
                 <button onClick={this.addChildCount}>+Child</button>
-                <Child ref={this.childRef} addParentCount={this.addCount}/>
+                <Child count={this.state.childCount} addParentCount={this.addCount} addChildCount={this.addChildCount} />
             </div>
         );
     }
