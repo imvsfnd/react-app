@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Counter from './Counter';
+import Progress from './Progress';
+import './style.css'
 
 
-render(<Counter />, document.getElementById('root'));
+render(<Progress />, document.getElementById('root'));
