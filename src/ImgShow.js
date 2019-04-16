@@ -11,10 +11,11 @@ class imgShow extends Component {
     };
     render() {
         const { visible } = this.state;
+        const styleObj = { display: visible ? 'block' : 'none' };
         return (
             <div>
                 <button onClick={this.toggle}>Toggle</button>
-                {visible && <img src="imgs\imgShow.jpg" alt="imgShow" /> }
+                <img style={styleObj} src="imgs\imgShow.jpg" alt="imgShow" /> 
             </div>
         );
     }
