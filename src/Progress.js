@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import ProgressBar from "./ProgressBar";
 
-export default class Progress extends Component {
+export default class Progress extends PureComponent {
     state = {
         value: 0,
     }
