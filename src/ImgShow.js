@@ -14,7 +14,7 @@ class imgShow extends Component {
         return (
             <div>
                 <button onClick={this.toggle}>Toggle</button>
-                {visible ? <img src="imgs\imgShow.jpg" alt="imgShow" /> : null}
+                {visible && <img src="imgs\imgShow.jpg" alt="imgShow" /> }
             </div>
         );
     }
