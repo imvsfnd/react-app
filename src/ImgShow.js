@@ -11,11 +11,10 @@ class imgShow extends Component {
     };
     render() {
         const { visible } = this.state;
-        const imgOption = `image ${visible ? '' : 'hide'}`;
         return (
             <div>
                 <button onClick={this.toggle}>Toggle</button>
-                <img className={imgOption} src="imgs\imgShow.jpg" alt="imgShow" /> 
+                <img className={`image ${visible ? '' : 'hide'}`} src="imgs\imgShow.jpg" alt="imgShow" /> 
             </div>
         );
     }
