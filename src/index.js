@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Counter from './Counter';
+import Parent from './Parent';
 
 
-render(<Counter initCount= "10"/>, document.getElementById('root'));
+render(<Parent initCount= "10"/>, document.getElementById('root'));
 
 
