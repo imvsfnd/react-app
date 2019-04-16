@@ -11,7 +11,7 @@ class imgShow extends Component {
     };
     render() {
         const { visible } = this.state;
-        const imgOption = visible?'image':'imgae hide'
+        const imgOption = `image ${visible ? '' : 'hide'}`;
         return (
             <div>
                 <button onClick={this.toggle}>Toggle</button>
