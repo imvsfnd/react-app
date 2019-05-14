@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Progress from './Progress';
+import App from './App.js';
 import './style.css'
 
 
-render(<Progress />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
