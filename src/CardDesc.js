@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-export default class CardDesc extends Component {
+export default class CardDesc extends PureComponent {
     state = {
         open: false,
     };
@@ -14,7 +14,9 @@ export default class CardDesc extends Component {
         const readFn = `card__desc__text ${open ? '' : 'less'}`;
         return (
           <div className="card__desc">
-            <div className={readFn}>{this.props.children}</div>
+            <div className={readFn}>
+              {this.props.children}
+            </div>
             <button
               className="card__desc__btn"
               onClick={this.toggle}
