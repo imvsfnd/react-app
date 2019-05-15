@@ -1,0 +1,23 @@
+body { background-color: #000000; margin: 0; font: 16px "Microsoft YaHei", Arial, Helvetica, sans-serif,Zawgyi-One; }
+
+.card { display: inline-block; vertical-align: top; width: 500px; padding: 0 1em 0.5em; margin: 1em; color: #073f48; background: #031c20; border-radius: 10px; }
+
+.card__desc__text { width: 100%; }
+
+.card__desc__text.less { height: 1.5em; white-space: nowrap; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+
+.card__avatar { width: 30px; border-radius: 50%; vertical-align: middle; }
+
+.card__teacher { text-decoration: none; color: #06f; }
+
+.card__stats { margin: 1em 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.card__stat { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
+.card__stat > * { display: inline-block; }
+
+.card__stat > label { background: #000; font-size: 0.8em; border-radius: 4px; padding: 0.2em 0.4em; margin-right: 0.5em; }
+
+.card__video { width: 100%; max-width: 100%; border-radius: 10px; opacity: 0.03; }
+
+/*# sourceMappingURL=Card.module.css.map */

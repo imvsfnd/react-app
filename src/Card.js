@@ -1,39 +1,40 @@
-import React from 'react'
+import React, { Component } from 'react'
+import style from './Card.module.css'
 
-import CardTeacher from "./CardTeacher";
-import CardDesc from "./CardDesc";
-import './Card.css';
-
-const Card = ({ data: { title, desc, like, students, price, teacher, video },
-}) => (
-        <div className="card">
-            <h2 className="card__title">{title}</h2>
-            <div className="card__desc">{desc}</div>
-            <CardDesc>{desc}</CardDesc>
-            <div className="card__stats">
-                <div className="card__stat">
-                    <label>受歡迎程度</label>
-                    <div>{like}</div>
+export class Card extends Component {
+    render() {
+        const { title, desc, like, students, price, teacher, video } = this.props.data;
+        return (
+            <div className={style.card}>
+                <h2 className={style.card__title}>{title}</h2>
+                <div className={style.card__desc}>{desc}</div>
+                <div className={style.card__stats}>
+                    <div className={style.card__stat}>
+                        <label>like</label>
+                        <div>{like}</div>
+                    </div>
+                    <div className={style.card__stat}>
+                        <label>student</label>
+                        <div>{students}</div>
+                    </div>
+                    <div className={style.card__stat}>
+                        <label>價格</label>
+                        <div>{price}</div>
+                    </div>
+                    <div className={style.card__stat}>
+                        <label>teacher</label>
+                        <div>{teacher.name}</div>
+                    </div>
                 </div>
-                <div className="card__stat">
-                    <label>學生</label>
-                    <div>{students}</div>
-                </div>
-                <div className="card__stat">
-                    <label>價格</label>
-                    <div>{price}</div>
-                </div>
-                <div className="card__stat">
-                    <label>教師</label>
-                    <CardTeacher data={teacher} />
-                </div>
+                <video
+                    className={style.card__video}
+                    poster={video.poster}
+                    src={video.source}
+                    controls
+                />
             </div>
-            <video
-                className="card__video"
-                poster={video.poster}
-                src={video.source}
-                controls
-            />
-        </div>
-    );
-export default Card;
+        )
+    }
+}
+
+export default Card
