@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import style from './Card.module.css'
-
+import CardTeacher from './CardTeacher'
+import CardDesc from './CardDesc'
 export class Card extends Component {
     render() {
         const { title, desc, like, students, price, teacher, video } = this.props.data;
         return (
             <div className={style.card}>
                 <h2 className={style.card__title}>{title}</h2>
-                <div className={style.card__desc}>{desc}</div>
+                <CardDesc>{desc}</CardDesc>
                 <div className={style.card__stats}>
                     <div className={style.card__stat}>
                         <label>like</label>
@@ -23,7 +24,7 @@ export class Card extends Component {
                     </div>
                     <div className={style.card__stat}>
                         <label>teacher</label>
-                        <div>{teacher.name}</div>
+                        <CardTeacher data={teacher}></CardTeacher>
                     </div>
                 </div>
                 <video

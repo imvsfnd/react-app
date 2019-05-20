@@ -1,9 +1,10 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
+import './Card.css'
 
-export default class CardDesc extends PureComponent {
+export class CardDesc extends Component {
     state = {
         open: false,
-    };
+    }
     toggle = () => {
         this.setState({
             open: !this.state.open,
@@ -11,19 +12,14 @@ export default class CardDesc extends PureComponent {
     };
     render() {
         const { open } = this.state;
-        const readFn = `card__desc__text ${open ? '' : 'less'}`;
+        const cn = `card__desc__text ${open ? '' : 'less'}`;
         return (
-          <div className="card__desc">
-            <div className={readFn}>
-              {this.props.children}
-            </div>
-            <button
-              className="card__desc__btn"
-              onClick={this.toggle}
-            >
-              {open ? 'Less' : 'More'}
-            </button>
-          </div>
-        );
-    }
-}
+                <div className="card__desc">
+                    <div className={cn}>{this.props.children}</div>
+                    <button className="card_desc_btn" onClick={this.toggle}>{open ? 'Less' : 'More'}</button>
+                </div>
+                )
+            }
+        }
+        
+        export default CardDesc

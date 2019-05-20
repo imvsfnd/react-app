@@ -6,9 +6,11 @@ body { background-color: #000000; margin: 0; font: 16px "Microsoft YaHei", Arial
 
 .card__desc__text.less { height: 1.5em; white-space: nowrap; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 
-.card__avatar { width: 30px; border-radius: 50%; vertical-align: middle; }
+.card__link { text-decoration: none; }
 
-.card__teacher { text-decoration: none; color: #06f; }
+.card__avatar { width: 20px; border-radius: 50%; vertical-align: middle; }
+
+.card__name { text-decoration: none; color: #086371; font-size: 13px; }
 
 .card__stats { margin: 1em 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
@@ -19,5 +21,7 @@ body { background-color: #000000; margin: 0; font: 16px "Microsoft YaHei", Arial
 .card__stat > label { background: #000; font-size: 0.8em; border-radius: 4px; padding: 0.2em 0.4em; margin-right: 0.5em; }
 
 .card__video { width: 100%; max-width: 100%; border-radius: 10px; opacity: 0.03; }
+
+.card_desc_btn { background-color: #031c20; border: 1px solid #000; color: #073f48; margin: 10px 0 0; outline: none;}
 
 /*# sourceMappingURL=Card.module.css.map */

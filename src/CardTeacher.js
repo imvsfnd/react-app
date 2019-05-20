@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
+import style from './Card.module.css'
+export class CardTeacher extends Component {
 
-const CardTeacher = ({ data: { name, link, image } }) => (
-    <a href={link} className="card__teacher">
-        <img className="card__avatar" src={image} alt="avatar" />
-        <span>{name}</span>
-    </a>
+    render() {
+        const { name, link, image } = this.props.data;
+        return (
+            <a className={style.card__link} href={link}>
+                <img className={style.card__avatar} src={image} alt="avatar" />
+                <span className={style.card__name}>{name}</span>
+            </a>
+        )
+    }
+}
 
-
-)
-export default CardTeacher;
+export default CardTeacher
