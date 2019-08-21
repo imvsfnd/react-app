@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-export class Item extends Component {
+export class Item extends PureComponent {
   render() {
+    console.log('render', this.props.text)
     return (
-      <div>
-        <li>{this.props.children}</li>
-      </div>
+
+        <li>{this.props.text}</li>
+
     )
   }
 }
